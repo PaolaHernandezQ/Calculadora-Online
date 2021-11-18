@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Calculadora Online</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="Estilos.css" rel="stylesheet"/>
+        <link rel="icon" href="Calculadora.png">
+    </head>
+    
+    <body>
+        <div>
+            <h1 style="color: aliceblue;">CALCULADORA</h1>  
+            <div class="Calculadora">
+                <input type="text" id="n1">  <!--Entrada de texto para el valor N°1-->
+                <input type="text" id="n2">  <!--Entrada de texto para el valor N°2-->    
+                <button id="suma">+</button>                  <!--Botón para el operador + -->
+                <button id="resta">-</button>                 <!--Botón para el operador - -->
+                <button id="multiplicacion">*</button>        <!--Botón para el operador * -->
+                <button id="division">/</button>              <!--Botón para el operador / -->
+                <button id="calcular">=</button>       <!--Botón para el operador = -->
+                <div class="Salida">
+                    <output id="r"></output>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--Código en Javascript-->
+        <script>
+            let operando;    //let es una variable de tipo local
+            let resultado;   // let es una variable de tipo local
+
+            // document.querySelector -> Devuelve el primer elemento del documento que coincida con el grupo especificado de selectores.
+            document.querySelector('#suma').addEventListener('click', () =>{
+                operando = '+'});
+            document.querySelector('#resta').addEventListener('click', () =>{
+                operando = '-'});
+            document.querySelector('#multiplicacion').addEventListener('click', () =>{
+                operando = '*'});
+            document.querySelector('#division').addEventListener('click', () =>{
+                operando = '/'});
+            document.querySelector('#calcular').addEventListener('click', () =>{
+                const n1 = parseFloat(document.querySelector('#n1').value);
+                const n2 = parseFloat(document.querySelector('#n2').value);
+                if(operando == '+'){
+                    resultado = n1 + n2;
+                }else if( operando == '-'){
+                    resultado = n1 - n2;
+                }else if(operando == '*'){
+                    resultado = n1 * n2;
+                }else if(operando == '/'){
+                    resultado = n1 / n2;
+                }
+                document.querySelector('#r').innerHTML = resultado;
+            });
+        </script>
+    </body>
+</html>

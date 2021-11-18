@@ -1,0 +1,36 @@
+/*En esta sección se aplica lo especificado a todos los elementos contenidos en el html*/
+body{
+    display: flex;
+    background-color: rgb(37, 109, 151);             /*Color de fondo*/
+    justify-content: center;                           /*Define cómo el navegador distribuye el espacio entre y alrededor del bloque que lo contiene*/
+    align-items: center;                               /*Indica la alineación de un elemento dentro del bloque que lo contiene.*/
+}
+
+.Calculadora{
+    display: grid;
+    justify-content: center;
+    background-color: rgb(75, 149, 155);               /*Color de fondo de la sección del teclado*/
+    grid-template-columns: repeat(2,75px);             /*Organiza los elementos en 4 columnas, con un grosor de 75px cada una*/
+    margin-top: 35vh;                                   /*Determina el grosor o altura del bloque que contiene los elementos*/
+    padding: 20px 0 20px 0;
+    border-radius: 15px;                               /*Hace que los bordes del recuadro del teclado sea curvo*/
+    box-shadow: 10px 10px rgb(59, 58, 58);             /*Añade una sombra al bloque, el primer parámetro es en X, y el segundo en Y*/
+}
+
+.Salida{
+    display: flex;
+    background-color: rgb(95, 190, 197);               /*Color de fondo de la sección del teclado*/
+    padding: 6px;                                      /*Determina el grosor o altura del bloque que contiene los elementos*/
+    border-radius: 10px;                               /*Hace que los bordes del recuadro del teclado sea curvo*/
+    box-shadow: 5px 5px rgb(59, 58, 58);
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);                       /*Se adigna un color al contenido de los botones*/
+    border-radius: 10px;                               /*Hace que los bordes del recuadro del teclado sea curvo*/
+    box-shadow: 1px 1px rgb(122, 118, 118);          /*Sombra del recuadro de los botones*/ 
+    background-color: rgb(52, 110, 114);             /*Color de fondo de los botones*/
+}
